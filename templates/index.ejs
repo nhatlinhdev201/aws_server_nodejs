@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Thêm thông tin sản phẩm</h1>
+  <div class="container">
+    <form action="" class="form-group">
+      <div class="form-input">
+        <label for="id">ID</label>
+        <input type="text" name="id" placeholder="Nhập id sản phẩm">
+      </div>
+      <div class="form-input">
+        <label for="name">Tên sản phẩm</label>
+        <input type="text" name="name" placeholder="Nhập tên sản phẩm">
+      </div>
+      <div class="form-input">
+        <label for="type">Loại sản phẩm</label>
+        <select name="type" id="">
+          <option value="Quần">Quần</option>
+          <option value="Áo">Áo</option>
+          <option value="Phụ kiện">Phụ kiện</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label for="total">Số lượng</label>
+        <input type="number" placeholder="Nhập số lượng sản phẩm">
+      </div>
+      <div class="form-input">
+        <label for="image">Chọn hình ảnh</label>
+        <input type="file" name="image">
+      </div>
+      <div class="form-button">
+        <button type="submit" class="btn-update">Cập nhật</button>
+        <button type="reset" class="btn-reset">Làm mới</button>
+      </div>
+    </form>
+  </div>
+  <h1>Danh sách sản phẩm hiện có</h1>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên sản phẩm</th>
+          <th>Loại sản phẩm</th>
+          <th>Số lượng</th>
+          <th>Hình ảnh</th>
+          <th>chọn</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(item=> { %>
+          <tr>
+            <td>
+              <%= item.id %>
+            </td>
+            <td>
+              <%= item.name %>
+            </td>
+            <td>
+              <%= item.type %>
+            </td>
+            <td>
+              <%= item.total %>
+            </td>
+            <td>image</td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
